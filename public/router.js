@@ -4,7 +4,9 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import MainLayout from './components/layout';
 
-import ProductListContainer from './components/containers/product-list-container';
+import homePage from './components/containers/homePage';
+import aboutPage from './components/containers/about';
+
 
 
 
@@ -13,7 +15,8 @@ import ProductListContainer from './components/containers/product-list-container
 export default (
   <Router history={browserHistory}>
     <Route component={MainLayout}>
-      <Route path="/" component={ProductListContainer} />
+      <Route path="/about" component={aboutPage} />
+      <Route path="/" component={homePage} />
     </Route>
   </Router>
 );

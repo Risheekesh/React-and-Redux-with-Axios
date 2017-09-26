@@ -32,7 +32,7 @@ app.get('/getSimpleData',function(req,res){
 
 
 
-app.get('/',function(req,res) {
+app.get('/*',function(req,res) {
 	console.log("default route=======");
 	res.render('./public/views/index.html')
 })

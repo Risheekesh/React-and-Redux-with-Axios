@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router';
 import * as api from '../../api/index';
 
-console.log(api)
 class ProductListContainer extends React.Component{
 	constructor(props){
 		super(props)
@@ -13,7 +13,14 @@ class ProductListContainer extends React.Component{
 	render(){
 		return(
 			<div className="children">
-				this is children{this.props.productData}
+				Home Page
+			{	this.props.productData.map(singleData=>{
+				return(
+					<div key={singleData}>{singleData}</div>
+					)
+				})
+			}
+			<Link to="/about">About</Link>
 			</div>
 		)
 	}

@@ -9,9 +9,12 @@ class test extends React.Component {
     }
   }
   render () {
+    console.log("this.props.children",this.props)
     return (
       <div className="layout">
+        <div>Header</div>
       	{this.props.children}
+        <div>Footer</div>
       </div>
     );
   }
